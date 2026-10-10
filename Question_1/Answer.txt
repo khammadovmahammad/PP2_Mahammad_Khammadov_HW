@@ -1,0 +1,12 @@
+Why do we need getters/setters?
+
+The fields x and y are private, so code outside the class cannot read or change
+them directly. Getters and setters are the controlled way to do that:
+
+- Encapsulation: the internal representation stays hidden and can change later
+  without breaking code that uses the class.
+- Validation: a setter can reject or correct bad values before they are stored.
+- Read-only / write-only control: you can provide only a getter (or only a
+  setter) to limit what other code is allowed to do.
+- Single point of change: logging, notifications or other side effects can be
+  added in one place instead of everywhere the field is used.
